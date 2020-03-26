@@ -12,6 +12,7 @@
 		D4390F12242D537300E42A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4390F10242D537300E42A83 /* Main.storyboard */; };
 		D4390F14242D537800E42A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4390F13242D537800E42A83 /* Assets.xcassets */; };
 		D4390F17242D537800E42A83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4390F15242D537800E42A83 /* LaunchScreen.storyboard */; };
+		D4390F25242D57D300E42A83 /* GKLCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = D4390F24242D57D300E42A83 /* GKLCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		D4390F13242D537800E42A83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4390F16242D537800E42A83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4390F18242D537800E42A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4390F22242D57D300E42A83 /* PotterAPI-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PotterAPI-C-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4390F23242D57D300E42A83 /* GKLCharacter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKLCharacter.h; sourceTree = "<group>"; };
+		D4390F24242D57D300E42A83 /* GKLCharacter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKLCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,9 @@
 		D4390F09242D537300E42A83 /* PotterAPI-C */ = {
 			isa = PBXGroup;
 			children = (
+				D4390F1F242D560F00E42A83 /* Model */,
+				D4390F20242D561400E42A83 /* Controller */,
+				D4390F21242D561E00E42A83 /* Views */,
 				D4390F10242D537300E42A83 /* Main.storyboard */,
 				D4390F1E242D538D00E42A83 /* Resources */,
 			);
@@ -70,6 +77,30 @@
 				D4390F18242D537800E42A83 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4390F1F242D560F00E42A83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4390F23242D57D300E42A83 /* GKLCharacter.h */,
+				D4390F24242D57D300E42A83 /* GKLCharacter.m */,
+				D4390F22242D57D300E42A83 /* PotterAPI-C-Bridging-Header.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4390F20242D561400E42A83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4390F21242D561E00E42A83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,12 +129,14 @@
 		D4390EFF242D537200E42A83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GKL;
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Turtle;
 				TargetAttributes = {
 					D4390F06242D537300E42A83 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -145,6 +178,7 @@
 			files = (
 				D4390F0B242D537300E42A83 /* AppDelegate.swift in Sources */,
 				D4390F0D242D537300E42A83 /* SceneDelegate.swift in Sources */,
+				D4390F25242D57D300E42A83 /* GKLCharacter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3N9XPK38Q;
 				INFOPLIST_FILE = "PotterAPI-C/Resources/Info.plist";
@@ -297,6 +332,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SIB.Production.PotterAPI-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PotterAPI-C/Model/PotterAPI-C-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3N9XPK38Q;
 				INFOPLIST_FILE = "PotterAPI-C/Resources/Info.plist";
@@ -315,6 +353,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SIB.Production.PotterAPI-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PotterAPI-C/Model/PotterAPI-C-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
