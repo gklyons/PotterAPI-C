@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly, nullable) NSString *bogart;
 
 - (instancetype) initWithName:(NSString *)name
+                        house:(NSString *)house
                         alias:(NSString *)alias
                      patronus:(NSString *)patronus
                        bogart:(NSString *)bogart;
